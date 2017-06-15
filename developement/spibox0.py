@@ -5,6 +5,8 @@
 # import GPIO library
 import RPi.GPIO as GPIO
 import time
+import picamera
+
 
 # set GPIO pin numbering, BOARD or BCM and input pin/channels
 try:
@@ -16,6 +18,10 @@ try:
     print("Starting test")
     time.sleep(2)
     print("Rdy")
+
+    # Instance created
+    camera = picamera.PiCamera()  # careful, leaving this open keeps a hidden preview, draining battery.
+    camera.resolution = (1024, 768)
 
 # Check input status of PIR_Pin
     while True:
