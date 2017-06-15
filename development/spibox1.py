@@ -17,7 +17,7 @@ try:
 
     def get_file_name():
         """Use datetime to create filename"""
-        return datetime.datetime.now().strftime("%Y-%m-%d_%H.%M.%S")
+        return datetime.datetime.now().strftime("%Y-%m-%d_%H.%M.%S" + '.jpg')
 
     def setup_picamera():
         """Setup picamera instance and parameters"""
@@ -44,7 +44,7 @@ try:
         """Get a list of common working directories"""
         directory_listing = []
         directory_listing.append(os.getcwd())
-        directory_listing.append('/home/pi/spibox/developement/captures')
+        directory_listing.append('/home/pi/spibox/development/captures')
         return directory_listing
 
     def menu():
