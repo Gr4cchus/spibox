@@ -1,5 +1,5 @@
 #!/bin/sh
-"""Read configuration files, file captures, archive & move captures, and package captures into /captures."""
+"""Read configuration file, file captures, archive & move captures, and package captures to email."""
 # messenger0.py
 # look for files in the capture directory then process them
 import os
@@ -35,7 +35,7 @@ class SpiboxMessenger:
                                    filename, '/home/pi/spibox/development/captures/archive/'])
 
     def email_files(self):
-        """mpack each file into MIME format"""
+        """mpack each file into MIME format and send off"""
         print(len(self.filelist))
         for filename in self.filelist:
             print('emailing' + filename)
@@ -52,5 +52,5 @@ while True:
     messenger.__init__()
     messenger.get_file_list()
     if messenger.emailon == "YES":
-        messenger.emailFiles()
-    messenger.moveFiles()
+        messenger.email_files()
+    messenger.move_files()
