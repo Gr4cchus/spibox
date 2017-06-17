@@ -1,4 +1,4 @@
-"""Basic Template w/ PiCamera"""
+"""Setup components, take photos, and define their location and filename"""
 # The PIR will always output low (0V) unless movement is detected, in which case it will output high (3.3V).
 # PIR-OUT GPIO pin as an input, and use Python to detect any voltage change.
 
