@@ -1,3 +1,4 @@
+#!/bin/bash
 """Setup components, take photos, and define their location and filename"""
 # The PIR will always output low (0V) unless movement is detected, in which case it will output high (3.3V).
 # PIR-OUT GPIO pin as an input, and use Python to detect any voltage change.
@@ -71,11 +72,11 @@ try:
         print(GPIO.input(4))
         time.sleep(1)
 
-except KeyboardInterrupt:
-    print("  Bye for now")
-    GPIO.cleanup()
-    initialized_camera.close()
-# finally:
-#     print("Bye for now")
-#     initialized_camera.close()
+# except KeyboardInterrupt:
+#     print("  Bye for now")
 #     GPIO.cleanup()
+#     initialized_camera.close()
+finally:
+    print("Bye for now")
+    initialized_camera.close()
+    GPIO.cleanup()
