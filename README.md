@@ -1,7 +1,18 @@
-# spibox
+# Spibox
 <b>Unofficial spibox software pulled from a spibox sd card via spibox.zip</b> <br />
 * /spibox would be placed into /home/pi/spibox/ 
 * *.desktop files would be placed into /home/pi/Desktop
+
+## Installation, Configuration, and Execution
+* Tested on Raspbian and Ubuntu-Mate 16.04.2-armhf
+sudo apt update -y && sudo apt upgrade -y
+raspi-config > enable the camera
+cd
+git clone https://github.com/Gr4cchus/spibox.git
+python spibox/spibox.py
+or to run the developement python3 version with enhanced picture: python3 spibox/developement/spibox0.py
+
+Files are placed into spibox/capture or spibox/development/capture as jpg and timestamped.
 
 ## Hardware notes
 * PIR sensors and the Raspberry Pi 3 sometimes don't get along - if you're having false trigger reports, make sure the PIR Sensor is far away from the Pi 3
