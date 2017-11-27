@@ -45,7 +45,7 @@ try:
         """Get a list of common working directories"""
         directory_listing = []
         directory_listing.append(os.getcwd())
-        directory_listing.append('/home/pi/spibox/development/captures')
+        directory_listing.append('/home/pi/spibox/development/capture')
         return directory_listing
 
     def menu():
