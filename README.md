@@ -8,6 +8,7 @@
 
 ```
 sudo apt update -y && sudo apt upgrade -y
+sudo apt-get install -y ssmtp mpack
 raspi-config > enable the camera
 cd 
 git clone https://github.com/Gr4cchus/spibox.git 
@@ -16,7 +17,7 @@ python spibox/spibox.py
 To run in the background on python3 with the developement build: `nohup python3 spibox/developement/spibox0.py &`<br/>
 Pictures are placed into spibox/capture or spibox/development/captures as jpg and timestamped.
 ## Hardware notes
-* PIR sensors and the Raspberry Pi 3 sometimes don't get along - if you're having false trigger reports, make sure the PIR Sensor is far away from the Pi 3
+* PIR sensors and the Raspberry Pi 3 sometimes don't get along - if you're having false trigger reports, make sure the PIR Sensor is far away from the Pi 3 (Further testing seems to indicate shielding will be needed to prevent the mass of false positives)
 * Runs on 5v-12V power
 * Digital signal output is 3.3V high/low
 * Sensing range ~6-7 meters
